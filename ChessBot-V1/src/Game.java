@@ -183,9 +183,9 @@ public class Game {
                     case '♙':
                         if (board[zeile - 1][spalte] == ' ')
                             possibleMovesSelected[zeile - 1][spalte] = true;
-                        if (spalte - 1 >= 0 && board[zeile - 1][spalte - 1] != ' ')
+                        if (spalte - 1 >= 0 && blackPieces.contains(""+board[zeile - 1][spalte - 1]))
                             possibleMovesSelected[zeile - 1][spalte - 1] = true;
-                        if (spalte + 1 < 8 && board[zeile - 1][spalte + 1] != ' ')
+                        if (spalte + 1 < 8 && blackPieces.contains(""+board[zeile - 1][spalte + 1]))
                             possibleMovesSelected[zeile - 1][spalte + 1] = true;
                         if (zeile == 6 && board[zeile - 2][spalte] == ' ')
                             possibleMovesSelected[zeile - 2][spalte] = true;
@@ -329,9 +329,9 @@ public class Game {
                     case '♟':
                         if (board[zeile + 1][spalte] == ' ')
                             possibleMovesSelected[zeile + 1][spalte] = true;
-                        if (spalte + 1 < 8 && board[zeile + 1][spalte + 1] != ' ')
+                        if (spalte + 1 < 8 && whitePieces.contains(""+board[zeile + 1][spalte + 1]))
                             possibleMovesSelected[zeile + 1][spalte + 1] = true;
-                        if (spalte - 1 >= 0 && board[zeile + 1][spalte - 1] != ' ')
+                        if (spalte - 1 >= 0 && whitePieces.contains(""+board[zeile + 1][spalte - 1]))
                             possibleMovesSelected[zeile + 1][spalte - 1] = true;
                         if (zeile == 1 && board[zeile + 2][spalte] == ' ')
                             possibleMovesSelected[zeile + 2][spalte] = true;
